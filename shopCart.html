@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+  <div class="header">
+    <div class="element">
+      <div class="logo2"><img src="images/paper_still.png" alt="Logo"></div>
+    </div> 
+  
+    <div class="heading1"><h1>WORLD OF PARASOLS</h1></div>
+    <div class="heading2"><h2>Discover our Exotic Collection featured at Coachella!</h2></div>
+    <div class="heading2"><h2>Single Parasols and Sets: Click Item You Want To Purchase</h2></div>
+  </div>
+  
+  <br><br><br><br>
+
+<!-- &&&&&&&&&&&&&&&&&&&&& Products Purchased &&&&&&&&&&&&&&&&&&&&& -->
+
+<h2 class="purchasePage">Shopping Cart</h2>
+
+<div class="tableToo">
+<table cellpadding="4" cellspacing="4" border="1">
+  <tr>
+    <td valign="top">
+
+      <table cellpadding="4" cellspacing="4"  border="0">
+      <thead>
+         <tr><td class="tableTop" colspan="2">PARASOLS</td></tr>
+      </thead>
+
+      <tbody class="tableBody">
+          <tr>
+            <td><img src="images/french_parasol.png" alt="" style="width:40px;height:40px;"></td>
+            <td>FRENCH CHAMPLITTE</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('French','Hand-Made, One Item',29)"/></td>
+          </tr>
+
+          <tr>
+            <td><img src="images/indonesia_parasol.png" alt="" style="width:40px;height:40px;"></td>
+            <td>INDONESIAN PAINTED</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('Indonesian','Hand-Made, One Item',39)"/></td>
+          </tr>
+
+          <tr>
+            <td><img src="images/yellowBlue_parasol.png" alt="" style="width:40px;height:40px;"></td>
+            <td>ALGERIAN ALGIERS</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('Algerian','Hand-Made, One Item',49)"/></td>
+          </tr>
+            
+          <tr>
+            <td><img src="images/parasol_kyoto.png" alt="Gift_Set" style="width:40px;height:40px;"></td>
+            <td>JAPANESE KYOTO</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('Japanese','Hand-Made, Set of 3',189)"/></td>
+          </tr>
+
+          <tr>
+            <td><img src="images/cohila_parasols.png" alt="Gift_Set3" style="width:40px;height:40px;"></td>
+            <td>COACHELLA</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('Californian','Hand-Made, Set of 3',199)"/></td>
+          </tr>
+                  
+          <tr>
+            <td><img src="images/parasol_wuhan.png" alt="Gift_Set2" style="width:40px;height:40px;"></td>
+            <td>CHINESE WUHAN</td>
+            <td><input type="button" value="Add to cart" onclick="AddtoCart('Chinese','Hand-Made, Set of 3',179)"/></td>
+          </tr>
+  </tbody>
+</table>
+    </td>
+
+    <td valign="top">
+      <table cellpadding="4" cellspacing="4" border="1" id="orderedProductsTbl">
+        
+          <!-- <table cellpadding="4" cellspacing="4" border="1" input type="text" id="orderedProductsTbl" name="product_name" placeholder="Product Type"> -->
+        <!-- <input type="text" id="orderedProductsTbl" name="product_name" placeholder="Product Type"> -->
+       
+          <thead class="tableHead">
+           <tr>
+             <td>Origin:</td>
+             <td>Description:</td>
+             <td>Price:</td>
+            </tr>
+          </thead>
+
+          <tbody id="orderedProductsTblBody"></tbody>
+          
+          <tfoot Class="tableFoot">
+            
+            <tr>
+              <td>Total Before Shipping:</td>
+              <td colspan="3" align="right" id="cart_total"></td>
+
+              <!-- <td colspan="3" align="right" input type="text" id="cart_total" name="price_name" placeholder="Total Price"></td> -->
+               <!-- <input type="text" id="cart_total" name="price_name" placeholder="Total Price"> -->
+
+            </tr>
+            <tr>
+                <td>Total Cost:</td>
+                <td colspan="3" align="right" id="total_cost"></td>
+            </tr>
+          </tfoot>
+
+        </table>
+    </td>
+
+  </tr>
+</table>
+</div>
+
+  <br><hr>
+  <div class="checkout1">
+    Click to <button class="checkout2" style="border-radius: 10px; padding: 5px 12px;"><a href="index.html#product2">Continue Shopping</a></button> or Checkout below
+  </div>
+  <hr><br>
+
+
+  <!-- &&&&&&&&&&&&&&&&&&&&& Customer Information &&&&&&&&&&&&&&&&&&&&& -->
+
+  <h2 class="purchasePage">Checkout</h2>
+
+  <div class="row11">
+    <div class="col-75">
+      <div class="container11">
+        <form action="{{url_for('thankyou')}}" class="" method="POST">
+  
+                
+                  <div class="row11">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="email">Email</label>
+                      <input type="text" name="email_name" placeholder="Email Address">
+          
+                      <label for="fname">Full Name</label>
+                      <input type="text" name="full_name" placeholder="First & Last Name">
+          
+                      <label for="adr">First Address Line</label>
+                      <input type="text" name="address1_name" placeholder="Number and Street">
+          
+                      <label for="adr">Second Address Line</label>
+                      <input type="text" name="address2_name" placeholder="Apt or Floor">
+          
+                      <label for="city">City</label>
+                      <input type="text" name="city_name" placeholder="City or Township">
+          
+                      <div class="row11">
+                        <div class="col-50">
+                          <label for="state">State</label>
+                          <input type="text" name="state_name" placeholder="Two Letter Abbreviation">
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Zip Code</label>
+                          <input type="text" name="zipCode_name" placeholder="Postal Code">
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Phone Number</label>
+                          <input type="text" name="phone_name" placeholder="Telephone Number">
+                        </div>
+                      </div>
+                    </div>            
+                    
+                    <div class="col-50">
+                          <h3>Payment</h3>
+                          <label for="fname">Accepted Cards</label>
+                      <div class="iconLogo">
+                        <p>
+                          <img class="" src="images/icon/visa_logo.png" alt="Logo" style="width:50px;height:20px;color:navy;">
+                          <img class="" src="images/icon/amex_logo.png" alt="Logo" style="width:50px;height:20px;color:blue;">
+                          <img class="" src="images/icon/master_logo.png" alt="Logo" style="width:50px;height:20px;color:red;">
+                          <img class="" src="images/icon/disc_logo.png" alt="Logo" style="width:50px;height:20px;color:orange;"></p>
+                      </div>
+  
+                        <label for="cname">Cardholder's Name</label>
+                        <input type="text" name="cardName_name" placeholder="Name on Card">
+  
+                        <label for="ccnum">Card Number</label>
+                        <input type="text" name="cardNo_name" placeholder="1111-2222-3333-4444">
+  
+                        <label for="exp">Expiration Date</label>
+                        <input type="text" name="expDate_name" placeholder="mm/yy">
+  
+                      <div class="row11">
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input type="text" name="cvvNo_name" placeholder="***">
+                        </div>
+                      </div>
+                      
+                   </div> 
+                  </div>
+                  <label>
+                  <input type="checkbox" checked="checked" name="sameadr"> Shipping Address Same as Billing</label>
+                        <br>
+                        <!-- <button type="button" name=""><a href="thankyou.html" title="submit" class="btn11">Click to Submit Payment</a></button> -->
+                        <input type="submit" value="Click to Submit Payment" class="btn11" title=""/>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>

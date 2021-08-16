@@ -1,0 +1,713 @@
+body {
+  background-color: rgb(255, 255, 224);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header{
+  height: 100px;
+}
+
+.heading1 h1 {
+  text-align: center;
+  font-family: Cursive, Lucida Handwriting, sans-serif;
+  font-style: italic;
+  color: rgb(236, 176, 96);
+}
+
+.heading2 h2 {
+  text-align: center;
+  font-family: Cursive, Lucida Handwriting, sans-serif;
+  font-style: italic;
+  color: rgb(236, 176, 96);
+}
+
+.logo {
+  width:20%;
+  height:95%;
+  float:left;
+  margin-left: 2%;
+  margin-right: 4%;
+  animation-name: stretch;
+  animation-duration: 3s;
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(0, 0, 255);
+  border-radius: 10px;
+}
+
+.logo2 {
+  width:20%;
+  height:95%;
+  float:left;
+  margin-left: 2%;
+  margin-right: 4%;
+  border: 2px solid rgb(0, 0, 255);
+  border-radius: 10px;
+}
+
+@keyframes stretch {
+  0% {transform: scale(.3); border-radius: 100%;}
+  50% {}
+  100% {transform: scale(1);}
+}
+
+.heading1 {
+    width:70%;
+    height: 45%;
+    float:left;
+}
+
+.heading2 {
+    width:70%;
+    height: 45%;
+    float:left;
+}
+
+/* SLIDESHOW */
+.slideshow {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slidewrapper {
+  width: 400%;
+  height: 100%;
+  animation: slideshow 33s;
+  animation-delay: 4s;
+  animation-timing-function: ease-in; 
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.slide1 {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: rgb(250, 185, 162);
+  border: 2px solid rgb(126, 112, 93);;
+  font-weight: bold;
+  text-align: center;
+}
+
+.slide2 {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: rgb(214, 117, 82);
+  border: 2px solid rgb(126, 112, 93);
+  font-weight: bold;
+  text-align: center;
+}
+
+.slide3 {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: rgb(192, 137, 117);
+  border: 2px solid rgb(126, 112, 93);
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes slideshow {
+	0% {margin-left: 0%; }
+	33% {margin-left: -100%; }
+	66% {margin-left: -200%; }
+	100% {margin-left: -300%; }
+}
+
+/* MAIN PANEL ONE */
+.main1 {
+  height: 600px;
+  background-image: url("images/varied_parasols.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  position: relative;
+}
+.panel1 {
+  border: 3px solid rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgb(211,211,211), rgb(173, 216, 230));
+  font-family: Cursive, Lucida Handwriting, sans-serif;
+  height: 200px;
+  width: 450px;
+  font-size: 18px;
+  margin-top: 15%;
+  margin-left: 2%;
+  padding: 3%;
+  float:left;
+}
+
+/* MAIN PANEL TWO */
+.main2 {
+  height: 300px;
+  position: relative;
+}
+
+.panelLeft {
+  background-color: rgb(211, 211, 211);
+  height: 250px;
+  width: 350px;
+  margin-left: 5px;
+  float:left;
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.wordLeft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.imgLeft {
+  height: 250px;
+  width: 350px;
+  opacity: 0.5;
+}
+
+.imgLeft:hover {
+  opacity: 1;
+}
+
+.panelRight {
+  border: 1px solid rgb(233, 173, 233);
+  background-image: linear-gradient(to right, rgb(255,0,0,0), rgb(0, 204, 255));
+    height: 250px;
+  width: 400px;
+  opacity: 0.5;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-shadow: 1px 1px rgb(15, 15, 15);
+  float: right;
+}
+
+.lightpink{
+  background-color: rgb(255, 182, 193);
+  padding: 1%;
+  text-decoration: none;
+}
+
+.lightpink :hover {
+  background-color: rgb(54, 124, 204);
+  padding: 1%;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* POP-UP */
+
+.modalwindow {
+position: fixed;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background-color: rgba(66, 230, 245,0.8);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s;
+}
+
+.modalwindow:target {
+ opacity: 1;
+ pointer-events: auto;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* MODAL WINDOW */
+
+.product1 {
+  height: 500px;
+}
+
+.item {
+	width: 30%;
+	height: 100%;
+	float: left;
+	margin-left: 2%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* GIFT SETS */
+.product2 {
+  height: 500px;
+}
+
+.item {
+	border: 2px solid rgb(255, 0, 0);
+	width: 30%;
+	height: 100%;
+	float: left;
+	margin-left: 2%;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+}
+  /* 00000000000000000000000000000000000000 */
+    /* POP UP WINDOW */
+
+  .msgblock1 {
+    box-sizing: border-box;
+    width: 50%;
+    height: 90%;
+    background-color: rgb(211, 211, 211);
+    margin: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+.header2 {
+  background-color: rgb(128, 128, 128);
+  border-bottom-style: solid;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+}
+
+.footer2 {
+  background-color: rgb(255, 192, 203);
+  border-bottom-style: solid;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+}
+
+.new {
+  border: 1px solid rgb(255, 127, 80);
+}
+
+.new2 {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  text-align: justify;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: rgb(51, 181, 229);
+  color: rgb(255, 255, 255);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Shopping Cart */
+
+.tableToo {
+	border: 2px solid rgb(0, 0, 0);
+	padding: 5px;
+}
+
+.tableToo table {
+  border: 1px solid rgb(234, 177, 72);   
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: solid black; */
+}
+
+.tableTop {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  font-family: Cursive, Lucida Handwriting, sans-serif;
+}
+
+.tableBody {
+  font-weight: bold;
+}
+.tablebody img {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.tableBody img:hover {
+  box-shadow: 0 0 2px 1px rgba(7, 118, 245, 0.87);
+}
+
+.tableHead {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tableFoot {
+  font-weight: bold;
+  text-align: center;  
+  font-family: Cursive, Lucida Handwriting, sans-serif;
+}
+
+.checkout1 {
+  text-align: center;
+  background-color: rgb(234, 177, 72, 0.25);
+  padding: 7px;
+  font-size: 18px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.checkout2 {
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.thanks {
+  background-image: url("images/varied_parasols_ty.jpg");
+  opacity: .50;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  color: white;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: rgb(121, 94, 94);
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: rgb(83, 77, 77);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  rgb(255, 255, 255);
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  rgb(32, 178, 170);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  rgb(255, 255, 255);
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  rgb(32, 178, 170);
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  rgb(146, 153, 159);
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+}
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+
+/* &&&&&&&&&&&&&&&&&&&&& Products Purchased CSS &&&&&&&&&&&&&&&&&&&&& */
+.purchasePage {
+  background-color: rgba(7, 118, 245, 0.87);
+  /* border-radius: 12px; */
+  text-align: left;
+  color: white;
+  padding: 12px;
+  /* margin: 10px 0; */
+  border: 2px solid rgb(0, 0, 0);
+  width: 100%;
+  /* border-radius: 3px; */
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row11 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container11 {
+  background-color: rgb(211, 211, 211);
+  padding: 5px 20px 15px 20px;
+  /* border: 15px solid rgb(211, 211, 211); */
+  border: 15px solid rgb(234, 177, 72);
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.iconLogo {
+  text-align: center;
+  margin-bottom: 20px;
+  /* padding: 7px 0; */
+  /* font-size: 24px; */
+}
+
+.btn11 {
+  background-color: rgba(7, 118, 245, 0.87);
+  border-radius: 12px;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn11:hover {
+  background-color: rgba(7, 118, 245, 0.555);
+}
+
+a {
+  color: rgba(7, 118, 245, 0.87);
+}
+
+hr {
+  border: 1px solid rgb(211, 211, 211);
+}
+
+span.price {
+  float: right;
+  color: rgb(128, 128, 128);
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
